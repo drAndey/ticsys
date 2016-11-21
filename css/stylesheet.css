@@ -31,6 +31,12 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #wrap {
     max-width: 960px;
     margin: 0 auto;
@@ -48,6 +54,11 @@ header {
     text-align: center;
     vertical-align: middle;
     margin: auto;
+}
+
+#thumbnail {
+    text-align: left;
+    margin-left: 20px;
 }
 
 footer {
@@ -70,13 +81,11 @@ a:hover {
     background-color: #7f8c8d;
     color: white;
     width: 100%;
-    text-align: center;
 }
 
 a {
     display: block;
     color: black;
-    text-align: center;
     text-decoration: none;
 }
 
