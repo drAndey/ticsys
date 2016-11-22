@@ -56,6 +56,12 @@ header {
     margin: auto;
 }
 
+#feedbacklogo {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 #thumbnail {
     text-align: left;
     margin-left: 20px;
@@ -91,8 +97,6 @@ a {
 
 nav {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     background-color: #ecf0f1;
     overflow: hidden;
     border: 1px solid #dedede;
@@ -104,7 +108,7 @@ nav {
 }
 
 li {
-    width: 25%;
+    width: 20%;
     float: left;
     display: inline;
     padding-top: 3px;
@@ -113,35 +117,77 @@ li {
 }
 
 #contactform input, #contactform textarea {
-    background-color: #ecf0f1;
-    overflow: hidden;
-    border: 1px solid #dedede;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
-    color: #888;
     display: block;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#contactform input[type=text],#contactform textarea {
+    width: 30em;
+    max-width: 750px;
+    margin-left: 1em;
+}
+
+#contactform input:focus, #contactform textarea:focus {
+    box-shadow: 0 0 5px 0 #2a9898;
+    margin-left: 1em;
 }
 
 #contactform label {
-    margin-left: 20px;
+    float: left;
+    width: 10em;
+    margin-right: 1em;
+    margin-left: 1em;
 }
 
-#contactform #contactform-first_name, #contactform #contactform-phone, #contactform #contactform-email {
-    display: inline;
-    width: 17%;
-}
-
-#contactform textarea {
-    max-width: 900px;
+#contactform .missing {
+    border: 3px solid #36B3B3;
 }
 
 #contactform #contactform-name {
     display: none;
 }
 
-#contactform .missing {
-    border: 2px solid #36B3B3;
+#errormessage {
+    display: block;
+    width:auto;
+    height:auto;
+    padding:19px 20px 19px 20px;
+    background: #FBE3E4;
+    color:#8a1f11;
+    font-style:italic;
+    border-radius:5px;
+    margin: 20px 20px 20px 20px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: #989898;
+    border-radius: 5px;
+    border: 0;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: 0 1.5em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contactbuttons {
+    display: inline;
 }

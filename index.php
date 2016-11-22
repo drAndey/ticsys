@@ -16,6 +16,7 @@ include_once 'config/config.php';
 </head>
 
 <body>
+<a href="<?php echo URI_KONTAKT ?>"><img id="feedbacklogo" src="/images/feedback.png" alt="Feedback Ticsys" /></a>
 <div id="wrap">
     <header>
         <div id="logo">
@@ -36,10 +37,10 @@ include_once 'config/config.php';
     </nav>
     <?php
     switch (getCurrentURI()) {
-        case URL_EVENTS:
+        case URI_EVENTS:
             include_once 'controller/eventscontroller.php';
             break;
-        case URL_KONTAKT:
+        case URI_KONTAKT:
             include_once 'controller/contactcontroller.php';
             break;
     }
@@ -62,29 +63,32 @@ include_once 'config/config.php';
 /**
  * @return array containing all menu items in format [base href] => [title]
  */
-function getMenu() {
+function getMenu()
+{
     return array(
-        URL_HOME => 'Home',
-        URL_EVENTS => 'Events',
-        URL_FAQ => 'FAQ',
-        URL_KONTAKT => 'Kontakt'
+        URI_HOME => 'Home',
+        URI_EVENTS => 'Events',
+        URI_FAQ => 'FAQ',
+        URI_KONTAKT => 'Kontakt'
     );
 }
 
 /**
  * @return string the requested menu item URI
  */
-function getCurrentURI() {
+function getCurrentURI()
+{
     $menu = getMenu();
     if (array_key_exists($_SERVER['REQUEST_URI'], $menu)) {
         return $_SERVER['REQUEST_URI'];
     } else {
         foreach (array_keys(getMenu()) as $href) {
-            if(preg_match("@^$href@", $_SERVER['REQUEST_URI'])) {
+            if (preg_match("@^$href@", $_SERVER['REQUEST_URI'])) {
                 return $href;
             }
         }
     }
     return key($menu);
 }
+
 ?>
