@@ -123,7 +123,7 @@ li {
     margin-left: 1em;
 }
 
-#contactform input[type=text],#contactform textarea {
+#contactform input[type=text], #contactform textarea {
     width: 30em;
     max-width: 750px;
     margin-left: 1em;
@@ -151,13 +151,13 @@ li {
 
 #errormessage {
     display: block;
-    width:auto;
-    height:auto;
-    padding:19px 20px 19px 20px;
+    width: auto;
+    height: auto;
+    padding: 19px 20px 19px 20px;
     background: #FBE3E4;
-    color:#8a1f11;
-    font-style:italic;
-    border-radius:5px;
+    color: #8a1f11;
+    font-style: italic;
+    border-radius: 5px;
     margin: 20px 20px 20px 20px;
 }
 
@@ -188,6 +188,6 @@ input[type="button"],
     white-space: nowrap;
 }
 
-.contactbuttons {
-    display: inline;
+#contactform #contactbutton {
+    display: inline-block;
 }

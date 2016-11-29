@@ -82,9 +82,8 @@ if (!empty($_POST['contactform_submit'])) {
 
     <input type="hidden" name="contact" value="1">
 
-    <input type="submit" class="contactbuttons" name="contactform_submit" value="Senden">
-    <input type="reset" class="contactbuttons" value="Zurücksetzen">
-
+    <input type="submit" name="contactform_submit" value="Senden" id="contactbutton">
+    <input type="reset" value="Zurücksetzen" id="contactbutton">
 
     <?php
     if ($error) {
